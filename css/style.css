@@ -1,0 +1,144 @@
+html{
+    box-sizing: border-box;
+  }
+  
+*,
+*::after,
+*::before{
+box-sizing: inherit;
+}
+
+html,
+body {
+	height: 100%;
+}
+
+body {
+	overflow-x: hidden;
+	min-width: 320px;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 1.68;
+	color: #000;
+}
+
+.container {
+	width: 100%;
+	max-width: 1230px;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+
+h1 {
+	font-weight: 700;
+	font-size: 32px;
+	margin-bottom: 20px;
+}
+
+.calc-well {
+	padding: 50px 0;
+}
+
+.img-responsive {
+	margin-bottom: 10px;
+}
+
+.error {
+	font-size: 13px;
+	font-weight: 700;
+	color: rgb(126, 6, 6);
+}
+
+.image_picker_selector .thumbnail {
+	cursor: pointer;
+}
+
+.info > li {
+	padding-left: 5px;
+}
+
+.info > li::marker {
+	font-family: "Font Awesome 5 Free"; 
+	font-weight: 900; 
+	content: "\f058";
+	color: #015aaa;
+}
+
+/* Стили из первоисточника */
+
+.calc-well .thumbnails .half{-ms-flex: 0 0 66%;flex: 0 0 66%;max-width: 66%;}
+.calc-well .info2{font-size: 15px;}
+.calc-well .septik_img{max-height: 124px;}
+
+.calc-well .title{font-size: 21px;padding-bottom: 10px;font-weight: bold;}
+.calc-well .thumbnails{list-style: none;padding: 0px;margin: 0px;display: -ms-flexbox;display: flex;-ms-flex-wrap: wrap;flex-wrap: wrap;}
+.calc-well .thumbnails li{-ms-flex: 0 0 33.333333%;flex: 0 0 33.333333%;max-width: 33.333333%;}
+.calc-well .thumbnails .thumbnail{border-color: #E2E2EB;position: relative;border-radius: 10px;text-align: center;height: 90%;border: 1px solid #ddd;}
+.calc-well .thumbnails .thumbnail img{max-width: 100%;height: auto;}
+.calc-well .thumbnails .thumbnail .roofimg{max-height: 124px;}
+.calc-well .thumbnails .selected{border-color: #015aaa;}
+.calc-well .thumbnails .selected:after {content: url(../images/ok-icon.svg);position: absolute;top: 10px;right: 10px;}
+.calc-well .thumbnails .thumbnail .pr{color: #015aaa;display: block;font-weight: bold;}
+.calc-well .thumbnails li .dropdown-menu li{padding: 0px;flex: none;max-width: 100%;}
+.calc-well .thumbnails li .dropdown-menu .selected:after{display: none;}
+.calc-well .price{font-size: 70px;font-weight: bold;line-height: normal;}
+.calc-well .copy{font-size: 14px;padding-bottom: 20px;font-style: italic;}
+.calc-well .info{padding-left: 15px;font-size: 14px;display: inline-block;width: 100%;}
+.calc-well .info li{width: 51%;float: left;}
+
+.calc-well .wpcf7 .wpcf7-text{width: 100%;border-radius: 10px;border: 1px solid #E2E2EB;padding: 15px;margin-bottom: 20px;}
+.calc-well .wpcf7 .wpcf7-submit{color: white;background-color: #015aaa;border-radius: 2px;padding: 20px 40px;border: none;-webkit-transition: all 0.25s ease-out;transition: all 0.25s ease-out;}
+.calc-well .wpcf7 .wpcf7-submit:hover{background-color: black;}
+
+.calc-well .depth_price, .calc-well .roof_price, .calc-well .clevis_price, .calc-well .tranchei_price, .calc-well .septic_price  {margin: 10px 0px;}
+
+.calc-well .thumbnails .thumbnail {
+	height: 95%;
+}
+
+@media (max-width:992px){
+	.calc-well .title, .calc-well h2{text-align: center;}
+	.calc-well .thumbnails{margin-right: -5px;margin-left: -5px;}
+	.calc-well .thumbnails .thumbnail{padding: 5px;font-size: 14px;}
+	.calc-well .thumbnails li{padding-right: 5px;padding-left: 5px;}
+	.calc-well .thumbnails .thumbnail p, .calc-well .thumbnails .filter-option-inner-inner{font-size: 14px;text-align: center;}
+	.calc-well .thumbnails .btn-default{padding: 5px;}
+	.calc-well .thumbnails .bs-caret .caret{display: none;}
+	.calc-well .wpcf7 .wpcf7-submit{width: 100%;}
+	.calc-well .thumbnails .tranchei_num{color: #14B466;font-size: 100px;line-height: 103px;}
+}
+
+@media (min-width: 992px) {
+	.calc-well .thumbnails{margin-right: -10px;margin-left: -10px;}
+	.calc-well .thumbnails .thumbnail{padding: 20px;}
+	.calc-well .thumbnails li{padding-right: 10px;padding-left: 10px;}
+	.calc-well .thumbnails .thumbnail p, .calc-well .thumbnails .filter-option-inner-inner{font-size: 18px;font-weight: bold;text-align: center;}
+	.calc-well .thumbnails .btn-default {border: none;}
+	.calc-well .thumbnails .text{font-size: 16px;}
+	
+	.calc-well .sticky {position: fixed;z-index: 101;margin-top: 40px;}
+	.calc-well .stop {position: relative;z-index: 101;}
+	
+	.calc-well .thumbnails .tranchei_num{height: 124px;color: #14B466;font-size: 100px;line-height: 120px;}
+}
+
+@media (max-width:768px) {
+	.calc-well .thumbnails li {
+		flex: 0 0 49.3%;
+		max-width: 49.333333%;
+	}
+}
+
+@media (max-width:576px) {
+	h1 {
+		font-size: 22px;
+	}
+	.calc-well .title {
+		font-size: 17px;
+	}
+	.calc-well .thumbnails li {
+		flex: 0 0 100%;
+		max-width: 100%;
+	}
+}

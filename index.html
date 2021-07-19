@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Калькулятор копки колодцев</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/select2.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    
+
+</head>
+
+<body>
+
+    <section id="calc-well" class="calc-well">
+        <div class="container">
+            <h1>Калькулятор стоимости копки колодца</h1>
+            <div class="row">
+                <div class="col-lg-8">
+
+                    <div class="title">Выберите нужные параметры:</div>
+                    <ul class="thumbnails">
+                        <li>
+                            <div class="thumbnail">
+                                <label>Грубина колодца:
+                                    <div><img class="img-responsive"
+                                        src="https://kolodec-septik.ru/wp-content/plugins/kolocalc/images/glubina.jpg"
+                                        alt="Грубина колодца"></div>
+                                    <select id="depth" class="selectpicker" data-width="100%">
+                                        <option value="0">Без колец</option>
+                                        <option value="4300">1 кольцо</option>
+                                        <option value="8600">2 кольца</option>
+                                        <option value="12900">3 кольца</option>
+                                        <option value="17200">4 кольца</option>
+                                        <option value="21500">5 колец</option>
+                                        <option value="25800">6 колец</option>
+                                        <option value="30100">7 колец</option>
+                                        <option value="34400">8 колец</option>
+                                        <option value="38700">9 колец</option>
+                                        <option value="43000">10 колец</option>
+                                        <option value="47800">11 колец</option>
+                                        <option value="52600">12 колец</option>
+                                        <option value="57400">13 колец</option>
+                                        <option value="62200">14 колец</option>
+                                        <option value="67000">15 колец</option>
+                                    </select>
+                                </label>
+                                <div class="depth_price pr">0₽</div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="thumbnail">
+                                <label>Домик для колодца:
+                                    <div>
+                                        <img class="roofimg img-responsive" src="images/noroof.jpg" alt="Домик для колодца">
+                                    </div>
+                                    <select id="roof" class="selectpicker" data-width="100%">
+                                        <option value="0" data-image="images/noroof.jpg">
+                                            Без домика
+                                        </option>
+                                        <option value="8000" data-image="images/1.jpg">
+                                            ДК-1
+                                        </option>
+                                        <option value="23000" data-image="images/2-1.jpg">
+                                            ДК-2.1-М
+                                        </option>
+                                        <option value="25000" data-image="images/3-1.jpg">
+                                            ДК-3.1
+                                        </option>
+                                        <option value="22500" data-image="images/4-1.jpg">
+                                            ДК-4.1
+                                        </option>
+                                        <option value="28500" data-image="images/5-4.jpg">
+                                            ДК-5.4
+                                        </option>
+                                    </select>
+                                </label>
+                                <div class="roof_price pr">0₽</div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="thumbnail">
+                                <label>Скрепление скобами:
+                                    <div>
+                                        <img class="img-responsive" src="images/clevis.jpg"
+                                        alt="Скрепление колец металлическими скобами">
+                                    </div>
+                                    <select id="clevis" class="selectpicker" data-width="100%">
+                                        <option value="0">Без швов</option>
+                                        <option value="900">1 шов</option>
+                                        <option value="1800">2 шва</option>
+                                        <option value="2700">3 шва</option>
+                                        <option value="3600">4 шва</option>
+                                        <option value="4500">5 швов</option>
+                                        <option value="5700">6 швов</option>
+                                        <option value="6300">7 швов</option>
+                                        <option value="7200">8 швов</option>
+                                        <option value="8100">9 швов</option>
+                                        <option value="9000">10 швов</option>
+                                    </select>
+                                </label>
+                                <div class="clevis_price pr">0₽</div>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <div class="title">Укажите тип донного фильтра:</div>
+                    <select id="dfilter" class="image-picker">
+                        <option data-img-label="Без донного<br/> фильтра" data-img-src="images/nodfilter.jpg"
+                            data-img-alt="Без донного фильтра" value="0">Без донного фильтра
+                        </option>
+                        <option data-img-label="Речная галька (камни) <span class='pr'>2 500₽</span>"
+                            data-img-src="images/dfilter1.jpg" data-img-alt="Речная галька (камни) (2500 руб.)"
+                            value="2500">Речная галька (камни)
+                        </option>
+                        <option data-img-label="Осиновый щит и галька <span class='pr'>5 000₽</span>"
+                            data-img-src="images/dfilter2.jpg" data-img-alt="Осиновый щит и галька (5000 руб.)"
+                            value="5000">Осиновый щит и галька
+                        </option>
+                    </select>
+
+                    <div class="title">Укажите тип насоа:</div>
+                    <select id="pump" class="image-picker">
+                        <option data-img-label="Без установки<br/> насоса" data-img-src="images/nopump.jpg"
+                            data-img-alt="Без установки насоса" value="0">Без установки насоса
+                        </option>
+                        <option data-img-label="Съемный насос для полива <span class='pr'>3 000₽</span>"
+                            data-img-src="images/removable-pump.jpg" data-img-alt="Съемный насос для полива (3000 руб.)"
+                            value="3000">Съемный насос для полива
+                        </option>
+                        <option data-img-label="Насос для дома <span class='pr'>5 000₽</span>"
+                            data-img-src="images/home-pump.jpg" data-img-alt="Насос для дома (5000 руб.)" value="5000">
+                            Насос
+                            для дома
+                        </option>
+                    </select>
+
+                    <div class="title">Допольнительно:</div>
+                    <select id="lock" class="image-picker">
+                        <option data-img-label="Без глиняного<br/> замка" data-img-src="images/nolock.jpg"
+                            data-img-alt="Без глиняного замка" value="0">Без глиняного замка
+                        </option>
+                        <option data-img-label="Глиняный замок <span class='pr'>5 000₽</span>"
+                            data-img-src="images/clay-lock.jpg" data-img-alt="Глиняный замок (5000 руб.)" value="5000">
+                            Глиняный замок
+                        </option>
+                    </select>
+                </div>
+
+                <div class="col-lg-4">
+                    <div>Итоговая стоимость:</div>
+                    <!-- div для вывода итоговой стоимости -->
+                    <div class="price">0₽</div>
+                    <!-- Список, куда будет формироваться верстка, отображающая выбранную комплектацию  -->
+                    <ul class="info"></ul>
+                    <div role="form" class="wpcf7" id="wpcf7-f122-p42-o2" lang="ru-RU" dir="ltr">
+                        <div class="screen-reader-response">
+                            <p role="status" aria-live="polite" aria-atomic="true"></p>
+                            <ul></ul>
+                        </div>
+                        <form id="form" action="mail.php" method="POST" class="wpcf7-form init" novalidate="novalidate"
+                            data-status="init">
+                            <!-- скрытые поля, куда будут передоваться для отправки данные, выбранные пользователем -->
+                            <div style="display: none;">
+                                <input type="hidden" name="_wpcf7" value="122" />
+                                <input type="hidden" name="_wpcf7_version" value="5.4" />
+                                <input type="hidden" name="_wpcf7_locale" value="ru_RU" />
+                                <input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f122-p42-o2" />
+                                <input type="hidden" name="_wpcf7_container_post" value="42" />
+                                <input type="hidden" name="_wpcf7_posted_data_hash" value="" />
+                                <input type="hidden" name="project_name" value="calc well">
+                                <input type="hidden" name="admin_email" value="dumarenok@tut.by">
+                                <input type="hidden" name="form_subject" value="order">
+                            </div>
+                            <!-- Основная форма -->
+                            <p>
+                                <label>Ваш телефон:<br />
+                                    <span class="wpcf7-form-control-wrap ytel">
+                                        <input type="tel" name="ytel" value="" size="40"
+                                            class="wpcf7-form-control wpcf7-text wpcf7-tel wpcf7-validates-as-tel"
+                                            aria-invalid="false" placeholder="+7 (___) ___-__-__" />
+                                    </span>
+                                </label>
+                                <br />
+                                <label>Ваше имя:<br />
+                                    <span class="wpcf7-form-control-wrap yname">
+                                        <input type="text" name="yname" value="" size="40"
+                                            class="wpcf7-form-control wpcf7-text" aria-invalid="false" />
+                                    </span>
+                                </label>
+                            </p>
+                            <input type="hidden" name="yinfo" value="" class="wpcf7-form-control wpcf7-hidden yinfo" />
+                            <p><input type="submit" value="Заказать колодец" class="wpcf7-form-control wpcf7-submit" />
+                            </p>
+                            <div class="wpcf7-response-output" aria-hidden="true"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /.container -->
+    </section>
+
+    <!-- <script src="js/jquery-3.0.0.min.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="js/image-picker.min.js"></script>
+    <script src="js/select2.min.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="https://kit.fontawesome.com/53b3436db5.js" crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
